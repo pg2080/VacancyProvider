@@ -1,0 +1,45 @@
+Database:
+
+Job:-
+-jid varchar(5)
+-job type varchar(15)
+-available job varchar(25)
+-about job varchar(50)
+-salary varchar(7)
+-vacancy varchar(5)
+-required Qualification varchar(20)
+-company name varchar(20)
+-comp contactno varchar(10)
+-job application status varchar(7)
+
+Jobseeker:-
+-jid varchar(5)
+-uid varchar(5)
+-fname varchar(25)
+-mname varchar(25)
+-lname varchar(25)
+-dob date
+-gender varchar(6)
+-city varchar(15)
+-state varchar(15)
+-qualification varchar(20)
+-contactno varchar(10)
+-emailid varchar(50)
+-marital status varchar(9)
+
+JobProvider(HR):-
+-jid varchar(5)
+-hid varchar(5)
+-password varchar(20)
+-fname varchar(25)
+-mname varchar(25)
+-lname varchar(25)
+-city varchar(15)
+-state varchar(15)
+
+Owner:-
+-oid varchar(5)
+-fname varchar(20)
+-lname varchar(20)
+-emailid varchar(50)
+-contact no varchar(10)

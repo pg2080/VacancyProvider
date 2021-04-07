@@ -1,0 +1,17 @@
+F:\My Work Task\JobPortal\JobPortal\bin\JobPortal.dll.config
+F:\My Work Task\JobPortal\JobPortal\bin\JobPortal.dll
+F:\My Work Task\JobPortal\JobPortal\bin\JobPortal.pdb
+F:\My Work Task\JobPortal\JobPortal\obj\Debug\JobPortal.dll
+F:\My Work Task\JobPortal\JobPortal\obj\Debug\JobPortal.pdb
+F:\My Work Task\JobPortal\JobPortal\obj\Debug\JobPortal.csprojResolveAssemblyReference.cache
+C:\Users\Dhruvi vaghela\Desktop\final job portal\JobPortal\JobPortal\bin\JobPortal.dll
+C:\Users\Dhruvi vaghela\Desktop\final job portal\JobPortal\JobPortal\bin\JobPortal.pdb
+C:\Users\Dhruvi vaghela\Desktop\final job portal\JobPortal\JobPortal\bin\mscorlib.dll
+C:\Users\Dhruvi vaghela\Desktop\final job portal\JobPortal\JobPortal\bin\normidna.nlp
+C:\Users\Dhruvi vaghela\Desktop\final job portal\JobPortal\JobPortal\bin\normnfc.nlp
+C:\Users\Dhruvi vaghela\Desktop\final job portal\JobPortal\JobPortal\bin\normnfd.nlp
+C:\Users\Dhruvi vaghela\Desktop\final job portal\JobPortal\JobPortal\bin\normnfkc.nlp
+C:\Users\Dhruvi vaghela\Desktop\final job portal\JobPortal\JobPortal\bin\normnfkd.nlp
+C:\Users\Dhruvi vaghela\Desktop\final job portal\JobPortal\JobPortal\obj\Debug\JobPortal.csprojResolveAssemblyReference.cache
+C:\Users\Dhruvi vaghela\Desktop\final job portal\JobPortal\JobPortal\obj\Debug\JobPortal.dll
+C:\Users\Dhruvi vaghela\Desktop\final job portal\JobPortal\JobPortal\obj\Debug\JobPortal.pdb

@@ -1,0 +1,646 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{33663946-0B09-4AE8-A2F2-1FA7E97576AA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JobPortal</RootNamespace>
+    <AssemblyName>JobPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\JPortal.mdf" />
+    <Content Include="App_Data\JPortal_log.ldf">
+      <DependentUpon>JPortal.mdf</DependentUpon>
+    </Content>
+    <Content Include="Assets\css\.DS_Store" />
+    <Content Include="Assets\css\bootstrap\.DS_Store" />
+    <Content Include="Assets\css\css\.DS_Store" />
+    <Content Include="Assets\fonts\.DS_Store" />
+    <Content Include="Assets\fonts\flaticon\.DS_Store" />
+    <Content Include="Assets\fonts\flaticon\font\Flaticon.eot" />
+    <Content Include="Assets\fonts\flaticon\font\Flaticon.ttf" />
+    <Content Include="Assets\fonts\flaticon\font\Flaticon.woff" />
+    <Content Include="Assets\fonts\flaticon\font\_flaticon.scss" />
+    <Content Include="Assets\fonts\flaticon\license\license.pdf" />
+    <Content Include="Assets\fonts\icomoon\icomoon.eot" />
+    <Content Include="Assets\fonts\icomoon\icomoon.ttf" />
+    <Content Include="Assets\fonts\icomoon\icomoon.woff" />
+    <Content Include="Assets\fonts\ionicons\css\_ionicons.scss" />
+    <Content Include="Assets\fonts\ionicons\fonts\.DS_Store" />
+    <Content Include="Assets\fonts\ionicons\fonts\ionicons.eot" />
+    <Content Include="Assets\fonts\ionicons\fonts\ionicons.ttf" />
+    <Content Include="Assets\fonts\ionicons\fonts\ionicons.woff" />
+    <Content Include="Assets\fonts\ionicons\fonts\ionicons.woff2" />
+    <Content Include="Assets\fonts\open-iconic\open-iconic.eot" />
+    <Content Include="Assets\fonts\open-iconic\open-iconic.otf" />
+    <Content Include="Assets\fonts\open-iconic\open-iconic.ttf" />
+    <Content Include="Assets\fonts\open-iconic\open-iconic.woff" />
+    <Content Include="Assets\images\.DS_Store" />
+    <Content Include="Assets\js\.DS_Store" />
+    <Content Include="Assets\pencil %281%29.png" />
+    <Content Include="Assets\scss\.DS_Store" />
+    <Content Include="Assets\scss\bootstrap\.DS_Store" />
+    <Content Include="Assets\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="Assets\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="Assets\scss\bootstrap\bootstrap.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_deprecate.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_float.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_size.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="Assets\scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="Assets\scss\bootstrap\utilities\_align.scss" />
+    <Content Include="Assets\scss\bootstrap\utilities\_background.scss" />
+    <Content Include="Assets\scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="Assets\scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="Assets\scss\bootstrap\utilities\_display.scss" />
+    <Content Include="Assets\scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="Assets\scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="Assets\scss\bootstrap\utilities\_float.scss" />
+    <Content Include="Assets\scss\bootstrap\utilities\_overflow.scss" />
+    <Content Include="Assets\scss\bootstrap\utilities\_position.scss" />
+    <Content Include="Assets\scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="Assets\scss\bootstrap\utilities\_shadows.scss" />
+    <Content Include="Assets\scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="Assets\scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="Assets\scss\bootstrap\utilities\_stretched-link.scss" />
+    <Content Include="Assets\scss\bootstrap\utilities\_text.scss" />
+    <Content Include="Assets\scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="Assets\scss\bootstrap\vendor\_rfs.scss" />
+    <Content Include="Assets\scss\bootstrap\_alert.scss" />
+    <Content Include="Assets\scss\bootstrap\_badge.scss" />
+    <Content Include="Assets\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="Assets\scss\bootstrap\_button-group.scss" />
+    <Content Include="Assets\scss\bootstrap\_buttons.scss" />
+    <Content Include="Assets\scss\bootstrap\_card.scss" />
+    <Content Include="Assets\scss\bootstrap\_carousel.scss" />
+    <Content Include="Assets\scss\bootstrap\_close.scss" />
+    <Content Include="Assets\scss\bootstrap\_code.scss" />
+    <Content Include="Assets\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="Assets\scss\bootstrap\_dropdown.scss" />
+    <Content Include="Assets\scss\bootstrap\_forms.scss" />
+    <Content Include="Assets\scss\bootstrap\_functions.scss" />
+    <Content Include="Assets\scss\bootstrap\_grid.scss" />
+    <Content Include="Assets\scss\bootstrap\_images.scss" />
+    <Content Include="Assets\scss\bootstrap\_input-group.scss" />
+    <Content Include="Assets\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="Assets\scss\bootstrap\_list-group.scss" />
+    <Content Include="Assets\scss\bootstrap\_media.scss" />
+    <Content Include="Assets\scss\bootstrap\_mixins.scss" />
+    <Content Include="Assets\scss\bootstrap\_modal.scss" />
+    <Content Include="Assets\scss\bootstrap\_nav.scss" />
+    <Content Include="Assets\scss\bootstrap\_navbar.scss" />
+    <Content Include="Assets\scss\bootstrap\_pagination.scss" />
+    <Content Include="Assets\scss\bootstrap\_popover.scss" />
+    <Content Include="Assets\scss\bootstrap\_print.scss" />
+    <Content Include="Assets\scss\bootstrap\_progress.scss" />
+    <Content Include="Assets\scss\bootstrap\_reboot.scss" />
+    <Content Include="Assets\scss\bootstrap\_root.scss" />
+    <Content Include="Assets\scss\bootstrap\_spinners.scss" />
+    <Content Include="Assets\scss\bootstrap\_tables.scss" />
+    <Content Include="Assets\scss\bootstrap\_toasts.scss" />
+    <Content Include="Assets\scss\bootstrap\_tooltip.scss" />
+    <Content Include="Assets\scss\bootstrap\_transitions.scss" />
+    <Content Include="Assets\scss\bootstrap\_type.scss" />
+    <Content Include="Assets\scss\bootstrap\_utilities.scss" />
+    <Content Include="Assets\scss\bootstrap\_variables.scss" />
+    <Content Include="Assets\scss\style.scss" />
+    <Content Include="Assets\tick %281%29.png" />
+    <Content Include="LoginAssets\css\main.css" />
+    <Content Include="LoginAssets\css\util.css" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="LoginAssets\fonts\iconic\css\material-design-iconic-font.css" />
+    <Content Include="LoginAssets\fonts\iconic\css\material-design-iconic-font.min.css" />
+    <Content Include="LoginAssets\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="LoginAssets\images\bg-01.jpg" />
+    <Content Include="LoginAssets\images\bg-011.png" />
+    <Content Include="LoginAssets\images\icons\bg-01.jpg" />
+    <Content Include="LoginAssets\images\icons\favicon.ico" />
+    <Content Include="LoginAssets\js\main.js" />
+    <Content Include="LoginAssets\vendor\animate\animate.css" />
+    <Content Include="LoginAssets\vendor\animsition\css\animsition.css" />
+    <Content Include="LoginAssets\vendor\animsition\css\animsition.min.css" />
+    <Content Include="LoginAssets\vendor\animsition\js\animsition.js" />
+    <Content Include="LoginAssets\vendor\animsition\js\animsition.min.js" />
+    <Content Include="LoginAssets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="LoginAssets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="LoginAssets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="LoginAssets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="LoginAssets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="LoginAssets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="LoginAssets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="LoginAssets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="LoginAssets\vendor\bootstrap\js\popper.js" />
+    <Content Include="LoginAssets\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="LoginAssets\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="LoginAssets\vendor\countdowntime\countdowntime.js" />
+    <Content Include="LoginAssets\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="LoginAssets\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="LoginAssets\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="LoginAssets\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="LoginAssets\vendor\daterangepicker\moment.js" />
+    <Content Include="LoginAssets\vendor\daterangepicker\moment.min.js" />
+    <Content Include="LoginAssets\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="LoginAssets\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="LoginAssets\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="LoginAssets\vendor\select2\select2.css" />
+    <Content Include="LoginAssets\vendor\select2\select2.js" />
+    <Content Include="LoginAssets\vendor\select2\select2.min.css" />
+    <Content Include="LoginAssets\vendor\select2\select2.min.js" />
+    <Content Include="RegisterAssets\css\bg-011.png" />
+    <Content Include="RegisterAssets\css\opensans-font.css" />
+    <Content Include="RegisterAssets\css\style.css" />
+    <Content Include="RegisterAssets\fonts\material-design-iconic-font\css\material-design-iconic-font.css" />
+    <Content Include="RegisterAssets\fonts\material-design-iconic-font\css\material-design-iconic-font.min.css" />
+    <Content Include="RegisterAssets\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="RegisterAssets\fonts\Open_Sans\LICENSE.txt" />
+    <Content Include="RegisterAssets\images\form-v1-1.png" />
+    <Content Include="RegisterAssets\images\form-v1-2.png" />
+    <Content Include="RegisterAssets\images\form-v1-3.png" />
+    <Content Include="RegisterAssets\images\form-v1-4.png" />
+    <Content Include="RegisterAssets\images\form-v1-5.png" />
+    <Content Include="RegisterAssets\images\form-v1-6.png" />
+    <Content Include="RegisterAssets\images\form-v1-icon-2.png" />
+    <Content Include="RegisterAssets\images\form-v1-icon-3.png" />
+    <Content Include="RegisterAssets\images\form-v1-icon.png" />
+    <Content Include="RegisterAssets\images\wizard-v4.jpg" />
+    <Content Include="RegisterAssets\index.html" />
+    <Content Include="RegisterAssets\js\jquery-3.3.1.min.js" />
+    <Content Include="RegisterAssets\js\jquery.steps.js" />
+    <Content Include="RegisterAssets\js\main.js" />
+    <Content Include="RegisterAssets\vendor\bootrap\css\bootstrap.min.css" />
+    <Content Include="RegisterAssets\vendor\bootrap\js\bootstrap.min.js" />
+    <Content Include="RegisterAssets\WebForm1.aspx" />
+    <Content Include="WebPages\about.html" />
+    <Content Include="WebPages\Admincandidates.aspx" />
+    <Content Include="WebPages\AdminDashboard.aspx" />
+    <Content Include="WebPages\application.aspx" />
+    <Content Include="WebPages\candidateApplication.aspx" />
+    <Content Include="WebPages\Empty.png" />
+    <Content Include="WebPages\Fill.png" />
+    <Content Include="WebPages\HRJobs.aspx" />
+    <Content Include="WebPages\NewJobSearch.aspx" />
+    <Content Include="WebPages\Profile.aspx" />
+    <Content Include="WebPages\Ratings.aspx" />
+    <Content Include="WebPages\RegisterHR.aspx" />
+    <Content Include="WebPages\AddNewHR.aspx" />
+    <Content Include="WebPages\HRDashboard.aspx" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="LoginAssets\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="LoginAssets\fonts\iconic\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="LoginAssets\fonts\iconic\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="LoginAssets\fonts\iconic\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="LoginAssets\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="LoginAssets\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="LoginAssets\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="LoginAssets\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="LoginAssets\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="LoginAssets\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="LoginAssets\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="LoginAssets\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="LoginAssets\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="LoginAssets\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="LoginAssets\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="LoginAssets\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="LoginAssets\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="LoginAssets\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="LoginAssets\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="LoginAssets\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="LoginAssets\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="LoginAssets\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="LoginAssets\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="LoginAssets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="LoginAssets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="LoginAssets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="LoginAssets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="LoginAssets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="LoginAssets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="RegisterAssets\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="RegisterAssets\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="RegisterAssets\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="RegisterAssets\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="RegisterAssets\fonts\Open_Sans\OpenSans-Bold.ttf" />
+    <Content Include="RegisterAssets\fonts\Open_Sans\OpenSans-BoldItalic.ttf" />
+    <Content Include="RegisterAssets\fonts\Open_Sans\OpenSans-ExtraBold.ttf" />
+    <Content Include="RegisterAssets\fonts\Open_Sans\OpenSans-ExtraBoldItalic.ttf" />
+    <Content Include="RegisterAssets\fonts\Open_Sans\OpenSans-Italic.ttf" />
+    <Content Include="RegisterAssets\fonts\Open_Sans\OpenSans-Light.ttf" />
+    <Content Include="RegisterAssets\fonts\Open_Sans\OpenSans-LightItalic.ttf" />
+    <Content Include="RegisterAssets\fonts\Open_Sans\OpenSans-Regular.ttf" />
+    <Content Include="RegisterAssets\fonts\Open_Sans\OpenSans-SemiBold.ttf" />
+    <Content Include="RegisterAssets\fonts\Open_Sans\OpenSans-SemiBoldItalic.ttf" />
+    <Content Include="UserResume\2.pdf" />
+    <None Include="UserResume\4.pdf" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Assets\css\ajax-loader.gif" />
+    <Content Include="Assets\css\animate.css" />
+    <Content Include="Assets\css\aos.css" />
+    <Content Include="Assets\css\bootstrap-datepicker.css" />
+    <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="Assets\css\bootstrap\bootstrap-grid.css" />
+    <Content Include="Assets\css\bootstrap\bootstrap-reboot.css" />
+    <Content Include="Assets\css\css\bootstrap-reboot.css" />
+    <Content Include="Assets\css\css\mixins\_text-hide.css" />
+    <Content Include="Assets\css\flaticon.css" />
+    <Content Include="Assets\css\icomoon.css" />
+    <Content Include="Assets\css\ionicons.min.css" />
+    <Content Include="Assets\css\jquery.timepicker.css" />
+    <Content Include="Assets\css\magnific-popup.css" />
+    <Content Include="Assets\css\open-iconic-bootstrap.min.css" />
+    <Content Include="Assets\css\owl.carousel.min.css" />
+    <Content Include="Assets\css\owl.theme.default.min.css" />
+    <Content Include="Assets\css\style.css" />
+    <Content Include="Assets\fonts\flaticon\backup.txt" />
+    <Content Include="Assets\fonts\flaticon\font\flaticon.css" />
+    <Content Include="Assets\fonts\flaticon\font\flaticon.html" />
+    <Content Include="Assets\fonts\flaticon\font\Flaticon.svg" />
+    <Content Include="Assets\fonts\icomoon\icomoon.svg" />
+    <Content Include="Assets\fonts\ionicons\css\ionicons.min.css" />
+    <Content Include="Assets\fonts\ionicons\fonts\ionicons.svg" />
+    <Content Include="Assets\fonts\open-iconic\open-iconic.svg" />
+    <Content Include="Assets\images\bg_1.jpg" />
+    <Content Include="Assets\images\company-1.jpg" />
+    <Content Include="Assets\images\company-2.jpg" />
+    <Content Include="Assets\images\company-3.jpg" />
+    <Content Include="Assets\images\image_1.jpg" />
+    <Content Include="Assets\images\image_2.jpg" />
+    <Content Include="Assets\images\image_3.jpg" />
+    <Content Include="Assets\images\image_4.jpg" />
+    <Content Include="Assets\images\image_5.jpg" />
+    <Content Include="Assets\images\image_6.jpg" />
+    <Content Include="Assets\images\image_7.jpg" />
+    <Content Include="Assets\images\image_8.jpg" />
+    <Content Include="Assets\images\loc.png" />
+    <Content Include="Assets\images\person_1.jpg" />
+    <Content Include="Assets\images\person_2.jpg" />
+    <Content Include="Assets\images\person_3.jpg" />
+    <Content Include="Assets\images\person_4.jpg" />
+    <Content Include="Assets\images\person_5.jpg" />
+    <Content Include="Assets\images\person_6.jpg" />
+    <Content Include="Assets\images\undraw_work_time_lhoj.svg" />
+    <Content Include="Assets\js\aos.js" />
+    <Content Include="Assets\js\bootstrap.min.js" />
+    <Content Include="Assets\js\google-map.js" />
+    <Content Include="Assets\js\jquery-3.2.1.min.js" />
+    <Content Include="Assets\js\jquery-migrate-3.0.1.min.js" />
+    <Content Include="Assets\js\jquery.animateNumber.min.js" />
+    <Content Include="Assets\js\jquery.easing.1.3.js" />
+    <Content Include="Assets\js\jquery.magnific-popup.min.js" />
+    <Content Include="Assets\js\jquery.min.js" />
+    <Content Include="Assets\js\jquery.stellar.min.js" />
+    <Content Include="Assets\js\jquery.waypoints.min.js" />
+    <Content Include="Assets\js\main.js" />
+    <Content Include="Assets\js\owl.carousel.min.js" />
+    <Content Include="Assets\js\popper.min.js" />
+    <Content Include="Assets\js\range.js" />
+    <Content Include="Assets\js\scrollax.min.js" />
+    <Content Include="WebPages\HomePage.aspx" />
+    <Content Include="WebPages\HRList.aspx" />
+    <Content Include="WebPages\Login.aspx" />
+    <Content Include="WebPages\Navbar.Master" />
+    <Content Include="WebPages\Admin.Master" />
+    <Content Include="WebPages\PostNewJob.aspx" />
+    <Content Include="WebPages\Register.aspx" />
+    <Content Include="WebPages\RegisterdCandidates.aspx" />
+    <Content Include="WebPages\RegisterUser.aspx" />
+    <Content Include="WebPages\SearchJobs.aspx" />
+    <Content Include="WebPages\ShowRatings.aspx" />
+    <Content Include="WebPages\StudentDashboard.aspx" />
+    <Content Include="WebPages\Student.Master" />
+    <Content Include="WebPages\HR.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="JobPortalDBConnection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterAssets\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterAssets\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Admincandidates.aspx.cs">
+      <DependentUpon>Admincandidates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Admincandidates.aspx.designer.cs">
+      <DependentUpon>Admincandidates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\application.aspx.cs">
+      <DependentUpon>application.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\application.aspx.designer.cs">
+      <DependentUpon>application.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\candidateApplication.aspx.cs">
+      <DependentUpon>candidateApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\candidateApplication.aspx.designer.cs">
+      <DependentUpon>candidateApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\HRJobs.aspx.cs">
+      <DependentUpon>HRJobs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\HRJobs.aspx.designer.cs">
+      <DependentUpon>HRJobs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\NewJobSearch.aspx.cs">
+      <DependentUpon>NewJobSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\NewJobSearch.aspx.designer.cs">
+      <DependentUpon>NewJobSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Ratings.aspx.cs">
+      <DependentUpon>Ratings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Ratings.aspx.designer.cs">
+      <DependentUpon>Ratings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\RegisterHR.aspx.cs">
+      <DependentUpon>RegisterHR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\RegisterHR.aspx.designer.cs">
+      <DependentUpon>RegisterHR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\AddNewHR.aspx.cs">
+      <DependentUpon>AddNewHR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\AddNewHR.aspx.designer.cs">
+      <DependentUpon>AddNewHR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\HRDashboard.aspx.cs">
+      <DependentUpon>HRDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\HRDashboard.aspx.designer.cs">
+      <DependentUpon>HRDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\HR.Master.cs">
+      <DependentUpon>HR.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\HR.Master.designer.cs">
+      <DependentUpon>HR.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\HRList.aspx.cs">
+      <DependentUpon>HRList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\HRList.aspx.designer.cs">
+      <DependentUpon>HRList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Navbar.Master.cs">
+      <DependentUpon>Navbar.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Navbar.Master.designer.cs">
+      <DependentUpon>Navbar.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\PostNewJob.aspx.cs">
+      <DependentUpon>PostNewJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\PostNewJob.aspx.designer.cs">
+      <DependentUpon>PostNewJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\RegisterdCandidates.aspx.cs">
+      <DependentUpon>RegisterdCandidates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\RegisterdCandidates.aspx.designer.cs">
+      <DependentUpon>RegisterdCandidates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\RegisterUser.aspx.cs">
+      <DependentUpon>RegisterUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\RegisterUser.aspx.designer.cs">
+      <DependentUpon>RegisterUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\SearchJobs.aspx.cs">
+      <DependentUpon>SearchJobs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\SearchJobs.aspx.designer.cs">
+      <DependentUpon>SearchJobs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ShowRatings.aspx.cs">
+      <DependentUpon>ShowRatings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ShowRatings.aspx.designer.cs">
+      <DependentUpon>ShowRatings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\StudentDashboard.aspx.cs">
+      <DependentUpon>StudentDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\StudentDashboard.aspx.designer.cs">
+      <DependentUpon>StudentDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Student.Master.cs">
+      <DependentUpon>Student.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Student.Master.designer.cs">
+      <DependentUpon>Student.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60474</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60223/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
